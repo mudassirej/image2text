@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+
+<html lang="en">
+  <head>
+  <style>
+    .button-link {
+    font: bold 20px Arial;
+    text-decoration: none;
+    background-color: #ebd517;
+    color: #2d4ca0;
+    padding: 2px 6px 2px 6px;
+    border-top: 1px solid #cccccc;
+    border-right: 1px solid #333333;
+    border-bottom: 1px solid #333333;
+    border-left: 1px solid #CCCCCC;
+  }
+  </style>
+  <link rel = "icon" href = 
+  "static/logo.png" 
+          type = "image/x-icon">
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Text2Image App</title>
+    <meta content="Text2Image" name="description" />
+
+    <!-- Favicons -->
+    <link href="static/logo.png" rel="icon" />
+    <link
+      href="static/assets/img/apple-touch-icon.png"
+      rel="apple-touch-icon"
+    />
+
+    <!-- Google Fonts -->
+    <link
+      href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i"
+      rel="stylesheet"
+    />
+
+    <!-- Tailwind CSS -->
+    <link
+      href="https://unpkg.com/tailwindcss@^1.0/dist/tailwind.min.css"
+      rel="stylesheet"
+    />
+
+    <!-- JQuery -->
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"
+      integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+  </head>
+  <body>
+    <a href="/">
+      <img src="static/logo.png" width=200 height=200>
+      <p style="font-size:80%; color:rgb(7, 0, 0); text-align:left">   &nbsp &nbsp &nbsp &nbsp &nbspPowered by Stable Diffusion.</p>
+      </img>
+      </a>
+
+    <div>
+      <header>
+        <meta name="description" content="Task Scheduling App" />
+        <link rel="icon" href="/favicon.ico" />
+      </header>
+
+      <main>
+        <div class="grid grid-cols-3">
+         
+
+          <div class="min-h-screen max-h-screen col-span-4 ">
+            <br><br><br>
+            <div class="text-center text-xl font-bold mb-12 mx-4">
+              Text To Image App
+            </div>
+            <div class="mx-4 flex justify-center gap-16">
+              <div>
+                {% if message %}
+                
+                <p class="font-bold text-base text-center my-8">
+                   {{ message }}
+                </p>
+                {% endif %} {% if s3_file %}
+                <div class="flex flex-col sm:flex-row gap-12 p-4">
+                  <img
+                    src="{{ s3_file }}"
+                    width="700"
+                    height="600"
+                    class="object-contain"
+                  />
+             
+                
+                </div>
+                {% endif %}
+              </div>
+            </div>
+            <br>
+            <div class="text-center text-xl font-bold mb-6 mx-4">
+                File is ready to DOWNLOAD
+              </div>
+
+
+
+            <div class="flex justify-center">
+                <a href="/download" download= file.jpg class="button-link">Download</a>
+
+        </div>
+
+          </div>
+        </div>
+      </main>
+    </div>
+
+  
+  </body>
+</html>

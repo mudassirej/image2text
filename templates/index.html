@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Text2Image</title>
+    <meta content="VIN Decoder" name="description" />
+
+    <!-- Favicons -->
+    <link href="static/assets/img/logo.png" rel="icon" />
+    <link
+      href="static/assets/img/apple-touch-icon.png"
+      rel="apple-touch-icon"
+    />
+
+    <!-- Google Fonts -->
+    <link
+      href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i"
+      rel="stylesheet"
+    />
+
+    <!-- Tailwind CSS -->
+    <link
+      href="https://unpkg.com/tailwindcss@^1.0/dist/tailwind.min.css"
+      rel="stylesheet"
+    />
+
+    <!-- JQuery -->
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"
+      integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+  </head>
+  <body>
+    <a href="/">
+    <img src="static/logo.png" width=200 height=200>
+    <p style="font-size:80%; color:rgb(7, 0, 0); text-align:left">   &nbsp &nbsp &nbsp &nbsp &nbspPowered by Stable Diffusion.</p>
+    </img>
+    </a>
+    <div>
+      <header>
+        <meta name="description" content="Task Scheduling App" />
+        <link rel="icon" href="/favicon.ico" />
+      </header>
+
+      <main>
+        <div class="grid grid-cols-3">
+         
+
+          <div class="min-h-screen max-h-screen col-span-4 ">
+            <br><br><br>
+            <div class="text-center text-xl font-bold mb-12 mx-4">
+              Text To Image App
+            </div>
+            <br><br><br>
+            <div class="flex justify-center">
+              <form
+                method="get"
+                action="/image-text"
+                class="flex flex-col items-center"
+              >
+                <div class="flex gap-4 items-center">
+                  <label form="description" class="font-bold">
+                    Enter text
+                  </label>
+                  <input
+                    type="text"
+                    id="text"
+                    name="text"
+                    class="border rounded-md border-black appearance-none text-base placeholder-black font-medium focus:outline-none hover:border-indigo-900 focus:border-indigo-900 focus:border-transparent py-2 px-4"
+                  />
+                </div>
+                <input
+                  type="submit"
+                  value="SUBMIT"
+                  class="my-8 bg-indigo-700 text-white px-8 py-2 font-medium tracking-wider hover:cursor-pointer"
+                />
+              </form>
+            </div>
+
+          </div>
+        </div>
+      </main>
+    </div>
+
+  
+  </body>
+</html>
